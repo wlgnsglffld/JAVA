@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="JAVA summer vacation">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="18"/>
+    <property name="source" value="18"/>
+    <path id="JAVA summer vacation.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.test1.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.tset2.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.test3.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.test19.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.tset21.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.tset22.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.tset23.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.tset24.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.test25.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.test26.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.test27.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.test28.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <path id="run.OddEvenTest.classpath">
+        <path refid="JAVA summer vacation.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="JAVA summer vacation.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="test1">
+        <java classname="basics.test1" failonerror="true" fork="yes">
+            <classpath refid="run.test1.classpath"/>
+        </java>
+    </target>
+    <target name="tset2">
+        <java classname="basics.tset2" failonerror="true" fork="yes">
+            <classpath refid="run.tset2.classpath"/>
+        </java>
+    </target>
+    <target name="test3">
+        <java classname="basics.test3" failonerror="true" fork="yes">
+            <classpath refid="run.test3.classpath"/>
+        </java>
+    </target>
+    <target name="test19">
+        <java classname="basics.test19" failonerror="true" fork="yes">
+            <classpath refid="run.test19.classpath"/>
+        </java>
+    </target>
+    <target name="tset21">
+        <java classname="basics.tset21" failonerror="true" fork="yes">
+            <classpath refid="run.tset21.classpath"/>
+        </java>
+    </target>
+    <target name="tset22">
+        <java classname="basics.tset22" failonerror="true" fork="yes">
+            <classpath refid="run.tset22.classpath"/>
+        </java>
+    </target>
+    <target name="tset23">
+        <java classname="basics.tset23" failonerror="true" fork="yes">
+            <classpath refid="run.tset23.classpath"/>
+        </java>
+    </target>
+    <target name="tset24">
+        <java classname="basics.tset24" failonerror="true" fork="yes">
+            <classpath refid="run.tset24.classpath"/>
+        </java>
+    </target>
+    <target name="test25">
+        <java classname="basics.test25" failonerror="true" fork="yes">
+            <classpath refid="run.test25.classpath"/>
+        </java>
+    </target>
+    <target name="test26">
+        <java classname="basics.test26" failonerror="true" fork="yes">
+            <classpath refid="run.test26.classpath"/>
+        </java>
+    </target>
+    <target name="test27">
+        <java classname="basics.test27" failonerror="true" fork="yes">
+            <classpath refid="run.test27.classpath"/>
+        </java>
+    </target>
+    <target name="test28">
+        <java classname="basics.test28" failonerror="true" fork="yes">
+            <classpath refid="run.test28.classpath"/>
+        </java>
+    </target>
+    <target name="OddEvenTest">
+        <java classname="basics.OddEvenTest" failonerror="true" fork="yes">
+            <classpath refid="run.OddEvenTest.classpath"/>
+        </java>
+    </target>
+</project>
